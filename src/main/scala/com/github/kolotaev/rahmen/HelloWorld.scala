@@ -4,7 +4,7 @@ object HelloWorld extends App {
   Console.println("Hello World!")
   val m = Map(1 -> 100)
   val t = m.getOrElse(1, default={
-    throw new Exception("tt")
+    throw new Exception("bar")
   })
   Console.println(t)
 }
