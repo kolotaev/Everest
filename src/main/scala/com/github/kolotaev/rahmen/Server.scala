@@ -13,7 +13,7 @@ import java.time.Instant
 
 
 object Server {
-  def main(args: Array[String]): Unit = {
+  def run(config: Config): Unit = {
     implicit val system: ActorSystem = ActorSystem("my-system")
     implicit val materializer: ActorMaterializer = ActorMaterializer()
     // needed for the future flatMap/onComplete in the end
