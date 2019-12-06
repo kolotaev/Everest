@@ -9,6 +9,8 @@ import akka.stream.ActorMaterializer
 import scala.concurrent.ExecutionContextExecutor
 import scala.io.StdIn
 
+import java.time.Instant
+
 
 object Server {
   def main(args: Array[String]): Unit = {
@@ -20,16 +22,23 @@ object Server {
     val route =
       path("hello") {
         get {
-          complete(HttpEntity(ContentTypes.`text/html(UTF-8)`, "<h1>Say hello to akka-http</h1>"))
+          val data = Resource(
+            "asdf12", "qwert",
+            now(), now(), List[Link](), Map("foo" -> 123)
+          )
+          complete(HttpEntity(ContentTypes.`text/html(UTF-8)`, data.toString))
         }
       }
 
-    val bindingFuture = Http().bindAndHandle(route, "localhost", 8888)
+    val hostPort = ("0.0.0.0", 8888)
+    val bindingFuture = Http().bindAndHandle(route, hostPort._1, hostPort._2)
 
-    println(s"Server online at http://localhost:8888/\nPress RETURN to stop...")
+    println(s"Server online at $hostPort\nPress RETURN to stop...")
     StdIn.readLine() // let it run until user presses return
     bindingFuture
       .flatMap(_.unbind()) // trigger unbinding from the port
       .onComplete(_ => system.terminate()) // and shutdown when done
   }
+
+  def now(): Instant = Instant.now()
 }
