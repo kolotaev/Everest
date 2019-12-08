@@ -8,8 +8,9 @@ import akka.stream.ActorMaterializer
 
 import scala.concurrent.ExecutionContextExecutor
 import scala.io.StdIn
-
 import java.time.Instant
+
+import com.github.kolotaev.rahmen.configurator.Config
 
 
 object Server {
@@ -22,7 +23,7 @@ object Server {
     val route =
       path("hello") {
         get {
-          val data = Resource(
+          val data = Item(
             "asdf12", "qwert",
             now(), now(), List[Link](), Map("foo" -> 123)
           )

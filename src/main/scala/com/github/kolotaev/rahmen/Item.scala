@@ -2,7 +2,7 @@ package com.github.kolotaev.rahmen
 
 import java.time.Instant
 
-case class Resource(id: String,
+case class Item(id: String,
                     etag: String,
                     updatedAt: Instant,
                     createdAt: Instant,
