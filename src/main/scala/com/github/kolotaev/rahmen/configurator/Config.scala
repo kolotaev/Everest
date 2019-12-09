@@ -9,6 +9,7 @@ class Database {
   val host: String = ""
   val port: Int = 0
   val database: String = ""
+  val DSN: String = ""
 }
 
 class Schema {
