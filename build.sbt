@@ -1,7 +1,7 @@
 val username = "kolotaev"
-val repo = "Rahmen"
+val repo = "Everest"
 
-name := "rahmen"
+name := "everest"
 organization := s"com.github.$username"
 version := "0.0.1-SNAPSHOT"
 

@@ -1,4 +1,4 @@
-package com.github.kolotaev.rahmen
+package com.github.kolotaev.everest
 
 import java.time.Instant
 

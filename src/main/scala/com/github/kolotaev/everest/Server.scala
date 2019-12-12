@@ -1,4 +1,4 @@
-package com.github.kolotaev.rahmen
+package com.github.kolotaev.everest
 
 import akka.actor.ActorSystem
 import akka.http.scaladsl.Http

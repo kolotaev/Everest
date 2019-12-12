@@ -1,4 +1,4 @@
-package com.github.kolotaev.rahmen
+package com.github.kolotaev.everest
 
 class Config {
   val database: Option[Database] = None

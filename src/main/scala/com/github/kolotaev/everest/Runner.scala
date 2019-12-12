@@ -1,4 +1,4 @@
-package com.github.kolotaev.rahmen
+package com.github.kolotaev.everest
 
 // todo - delete me when there won't be a need for development
 object Runner {

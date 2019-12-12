@@ -1,6 +1,6 @@
 package com.github.kolotaev
 
-package object rahmen {
+package object everest {
   type Items = List[Item]
 
   // todo: do we use it?
