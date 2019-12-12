@@ -10,8 +10,6 @@ import scala.concurrent.ExecutionContextExecutor
 import scala.io.StdIn
 import java.time.Instant
 
-import com.github.kolotaev.rahmen.configurator.Config
-
 
 object Server {
   def run(config: Config): Unit = {

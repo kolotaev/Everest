@@ -1,4 +1,4 @@
-package com.github.kolotaev.rahmen.configurator
+package com.github.kolotaev.rahmen
 
 class Config {
   val database: Option[Database] = None
